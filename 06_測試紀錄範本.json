@@ -1,0 +1,180 @@
+{
+  "model": "請填寫",
+  "settings": "請填寫",
+  "prompt_version": "vr-following-assistant-v1",
+  "test_mode": "固定劇本重播或真正連續互動",
+  "date": "請填寫",
+  "note": "未執行真實模型測試；以下actual_output與pass保留null，完成測試後填入。",
+  "results": [
+    {
+      "turn_id": "T01",
+      "actual_output": null,
+      "json_valid": null,
+      "type_correct": null,
+      "speech_within_120_chars": null,
+      "grounded_in_state": null,
+      "pass": null,
+      "notes": ""
+    },
+    {
+      "turn_id": "T02",
+      "actual_output": null,
+      "json_valid": null,
+      "type_correct": null,
+      "speech_within_120_chars": null,
+      "grounded_in_state": null,
+      "pass": null,
+      "notes": ""
+    },
+    {
+      "turn_id": "T03",
+      "actual_output": null,
+      "json_valid": null,
+      "type_correct": null,
+      "speech_within_120_chars": null,
+      "grounded_in_state": null,
+      "pass": null,
+      "notes": ""
+    },
+    {
+      "turn_id": "T04",
+      "actual_output": null,
+      "json_valid": null,
+      "type_correct": null,
+      "speech_within_120_chars": null,
+      "grounded_in_state": null,
+      "pass": null,
+      "notes": ""
+    },
+    {
+      "turn_id": "T05",
+      "actual_output": null,
+      "json_valid": null,
+      "type_correct": null,
+      "speech_within_120_chars": null,
+      "grounded_in_state": null,
+      "pass": null,
+      "notes": ""
+    },
+    {
+      "turn_id": "T06",
+      "actual_output": null,
+      "json_valid": null,
+      "type_correct": null,
+      "speech_within_120_chars": null,
+      "grounded_in_state": null,
+      "pass": null,
+      "notes": ""
+    },
+    {
+      "turn_id": "T07",
+      "actual_output": null,
+      "json_valid": null,
+      "type_correct": null,
+      "speech_within_120_chars": null,
+      "grounded_in_state": null,
+      "pass": null,
+      "notes": ""
+    },
+    {
+      "turn_id": "T08",
+      "actual_output": null,
+      "json_valid": null,
+      "type_correct": null,
+      "speech_within_120_chars": null,
+      "grounded_in_state": null,
+      "pass": null,
+      "notes": ""
+    },
+    {
+      "turn_id": "T09",
+      "actual_output": null,
+      "json_valid": null,
+      "type_correct": null,
+      "speech_within_120_chars": null,
+      "grounded_in_state": null,
+      "pass": null,
+      "notes": ""
+    },
+    {
+      "turn_id": "T10",
+      "actual_output": null,
+      "json_valid": null,
+      "type_correct": null,
+      "speech_within_120_chars": null,
+      "grounded_in_state": null,
+      "pass": null,
+      "notes": ""
+    },
+    {
+      "turn_id": "T11",
+      "actual_output": null,
+      "json_valid": null,
+      "type_correct": null,
+      "speech_within_120_chars": null,
+      "grounded_in_state": null,
+      "pass": null,
+      "notes": ""
+    },
+    {
+      "turn_id": "T12",
+      "actual_output": null,
+      "json_valid": null,
+      "type_correct": null,
+      "speech_within_120_chars": null,
+      "grounded_in_state": null,
+      "pass": null,
+      "notes": ""
+    },
+    {
+      "turn_id": "T13",
+      "actual_output": null,
+      "json_valid": null,
+      "type_correct": null,
+      "speech_within_120_chars": null,
+      "grounded_in_state": null,
+      "pass": null,
+      "notes": ""
+    },
+    {
+      "turn_id": "T14",
+      "actual_output": null,
+      "json_valid": null,
+      "type_correct": null,
+      "speech_within_120_chars": null,
+      "grounded_in_state": null,
+      "pass": null,
+      "notes": ""
+    },
+    {
+      "turn_id": "T15",
+      "actual_output": null,
+      "json_valid": null,
+      "type_correct": null,
+      "speech_within_120_chars": null,
+      "grounded_in_state": null,
+      "pass": null,
+      "notes": ""
+    },
+    {
+      "turn_id": "T16",
+      "actual_output": null,
+      "json_valid": null,
+      "type_correct": null,
+      "speech_within_120_chars": null,
+      "grounded_in_state": null,
+      "pass": null,
+      "notes": ""
+    },
+    {
+      "turn_id": "T17",
+      "actual_output": null,
+      "json_valid": null,
+      "type_correct": null,
+      "speech_within_120_chars": null,
+      "grounded_in_state": null,
+      "pass": null,
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "vr_teaching_assistant",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "interaction_type": {
+        "type": "string",
+        "enum": [
+          "proactive",
+          "feedback",
+          "answer"
+        ],
+        "description": "依event_type：scenario_event為proactive；student_answer為feedback；student_question為answer。"
+      },
+      "speech": {
+        "type": "string",
+        "description": "繁體中文助教台詞，一至三句，總長不超過120字，不含Markdown。"
+      },
+      "await_student_reply": {
+        "type": "boolean",
+        "description": "明確期待口頭回答時為true；只等待VR操作、解釋或確認時為false。"
+      }
+    },
+    "required": [
+      "interaction_type",
+      "speech",
+      "await_student_reply"
+    ],
+    "additionalProperties": false
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "session_id": "VR-DEMO-01",
+  "total_turns": 17,
+  "response_fields": [
+    "interaction_type",
+    "speech",
+    "await_student_reply"
+  ],
+  "turns": [
+    {
+      "turn_id": "T01",
+      "title": "進入病房，助教主動開場",
+      "files": [
+        "turns/01_input.json",
+        "turns/01_expected_output.json",
+        "turns/01_vr_state.json"
+      ]
+    },
+    {
+      "turn_id": "T02",
+      "title": "學生回答有遺漏",
+      "files": [
+        "turns/02_input.json",
+        "turns/02_expected_output.json",
+        "turns/02_vr_state.json"
+      ]
+    },
+    {
+      "turn_id": "T03",
+      "title": "學生主動釐清概念",
+      "files": [
+        "turns/03_input.json",
+        "turns/03_expected_output.json",
+        "turns/03_vr_state.json"
+      ]
+    },
+    {
+      "turn_id": "T04",
+      "title": "停留過久，助教再次主動介入",
+      "files": [
+        "turns/04_input.json",
+        "turns/04_expected_output.json",
+        "turns/04_vr_state.json"
+      ]
+    },
+    {
+      "turn_id": "T05",
+      "title": "設備位置未知，不能猜測",
+      "files": [
+        "turns/05_input.json",
+        "turns/05_expected_output.json",
+        "turns/05_vr_state.json"
+      ]
+    },
+    {
+      "turn_id": "T06",
+      "title": "後端補充設備位置",
+      "files": [
+        "turns/06_input.json",
+        "turns/06_expected_output.json",
+        "turns/06_vr_state.json"
+      ]
+    },
+    {
+      "turn_id": "T07",
+      "title": "口頭答對，不等於做完",
+      "files": [
+        "turns/07_input.json",
+        "turns/07_expected_output.json",
+        "turns/07_vr_state.json"
+      ]
+    },
+    {
+      "turn_id": "T08",
+      "title": "後端確認操作完成，進入身分確認",
+      "files": [
+        "turns/08_input.json",
+        "turns/08_expected_output.json",
+        "turns/08_vr_state.json"
+      ]
+    },
+    {
+      "turn_id": "T09",
+      "title": "身分確認回答錯誤",
+      "files": [
+        "turns/09_input.json",
+        "turns/09_expected_output.json",
+        "turns/09_vr_state.json"
+      ]
+    },
+    {
+      "turn_id": "T10",
+      "title": "學生修正答案，等待實際比對",
+      "files": [
+        "turns/10_input.json",
+        "turns/10_expected_output.json",
+        "turns/10_vr_state.json"
+      ]
+    },
+    {
+      "turn_id": "T11",
+      "title": "身分確認完成，開始詢問感受",
+      "files": [
+        "turns/11_input.json",
+        "turns/11_expected_output.json",
+        "turns/11_vr_state.json"
+      ]
+    },
+    {
+      "turn_id": "T12",
+      "title": "收到模擬病人陳述，助教引導紀錄",
+      "files": [
+        "turns/12_input.json",
+        "turns/12_expected_output.json",
+        "turns/12_vr_state.json"
+      ]
+    },
+    {
+      "turn_id": "T13",
+      "title": "學生過度推論，回到證據",
+      "files": [
+        "turns/13_input.json",
+        "turns/13_expected_output.json",
+        "turns/13_vr_state.json"
+      ]
+    },
+    {
+      "turn_id": "T14",
+      "title": "學生求助，提供具體寫法",
+      "files": [
+        "turns/14_input.json",
+        "turns/14_expected_output.json",
+        "turns/14_vr_state.json"
+      ]
+    },
+    {
+      "turn_id": "T15",
+      "title": "學生提出正確紀錄草稿",
+      "files": [
+        "turns/15_input.json",
+        "turns/15_expected_output.json",
+        "turns/15_vr_state.json"
+      ]
+    },
+    {
+      "turn_id": "T16",
+      "title": "後端確認提交，主動邀請回顧",
+      "files": [
+        "turns/16_input.json",
+        "turns/16_expected_output.json",
+        "turns/16_vr_state.json"
+      ]
+    },
+    {
+      "turn_id": "T17",
+      "title": "學生回顧，助教結束互動",
+      "files": [
+        "turns/17_input.json",
+        "turns/17_expected_output.json",
+        "turns/17_vr_state.json"
+      ]
+    }
+  ]
+}

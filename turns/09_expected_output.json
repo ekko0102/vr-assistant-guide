@@ -1,0 +1,5 @@
+{
+  "interaction_type": "feedback",
+  "speech": "床號可以描述位置，但本課程不以床號作為身分確認依據。依照教材，你還需要詢問哪兩項資料？",
+  "await_student_reply": true
+}

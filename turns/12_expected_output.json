@@ -1,0 +1,5 @@
+{
+  "interaction_type": "proactive",
+  "speech": "病人表示有點緊張，場景也顯示他坐在床邊。你會如何區分病人的陳述與你實際觀察到的資訊？",
+  "await_student_reply": true
+}

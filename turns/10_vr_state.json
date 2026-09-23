@@ -1,0 +1,96 @@
+{
+  "turn_id": "T10",
+  "title": "學生修正答案，等待實際比對",
+  "input_file": "10_input.json",
+  "expected_output_file": "10_expected_output.json",
+  "vr_state_before_backend_update": {
+    "location": "模擬病房A03",
+    "hand_hygiene_completed": true,
+    "identity_verified": false,
+    "observation_completed": false,
+    "record_submitted": false,
+    "record_validated": false,
+    "equipment": [
+      {
+        "id": "sanitizer_01",
+        "name": "乾洗手液",
+        "location": "入口右側的用品架"
+      }
+    ],
+    "patient_statement": null,
+    "observations": [],
+    "vital_signs": null,
+    "idle_seconds": 0,
+    "confirmed_actions": [
+      "進入病房",
+      "完成課程手部衛生步驟"
+    ],
+    "phase": "身分確認"
+  },
+  "backend_delta_before_send": {
+    "phase": "身分確認"
+  },
+  "vr_state_when_sent": {
+    "location": "模擬病房A03",
+    "hand_hygiene_completed": true,
+    "identity_verified": false,
+    "observation_completed": false,
+    "record_submitted": false,
+    "record_validated": false,
+    "equipment": [
+      {
+        "id": "sanitizer_01",
+        "name": "乾洗手液",
+        "location": "入口右側的用品架"
+      }
+    ],
+    "patient_statement": null,
+    "observations": [],
+    "vital_signs": null,
+    "idle_seconds": 0,
+    "confirmed_actions": [
+      "進入病房",
+      "完成課程手部衛生步驟"
+    ],
+    "phase": "身分確認"
+  },
+  "vr_state_after_llm_response": {
+    "location": "模擬病房A03",
+    "hand_hygiene_completed": true,
+    "identity_verified": false,
+    "observation_completed": false,
+    "record_submitted": false,
+    "record_validated": false,
+    "equipment": [
+      {
+        "id": "sanitizer_01",
+        "name": "乾洗手液",
+        "location": "入口右側的用品架"
+      }
+    ],
+    "patient_statement": null,
+    "observations": [],
+    "vital_signs": null,
+    "idle_seconds": 0,
+    "confirmed_actions": [
+      "進入病房",
+      "完成課程手部衛生步驟"
+    ],
+    "phase": "身分確認"
+  },
+  "meaning": "LLM回覆不會自動改變VR狀態；下一回合變更由你扮演後端執行。",
+  "student_role": "我要詢問姓名和生日，再與腕帶及任務卡比對。",
+  "next_manual_action": "扮演後端，模擬病人說出姓名生日，完成三方一致比對。",
+  "checks": [
+    "身分仍未確認，不能提前變成true。",
+    "要求的是操作，不是口頭回覆。"
+  ],
+  "student_visible_state": "學生修正答案，說會詢問姓名生日並比對腕帶及任務卡；目前仍只是口頭回答。",
+  "backend_trigger_explanation": "學生語音辨識完成：修正答案",
+  "frontend_presentation": {
+    "subtitle": "正確，這符合本課程的身分確認方式。請實際詢問並完成比對，再繼續下一步。",
+    "tts_text": "正確，這符合本課程的身分確認方式。請實際詢問並完成比對，再繼續下一步。",
+    "after_speech": "台詞播完後，不要求學生一定回答；保留操作介面，依課程狀態等待操作、事件或學生主動提問。",
+    "note": "這是前端實作示意，不是LLM輸出欄位；UI樣式由VR開發者決定。"
+  }
+}

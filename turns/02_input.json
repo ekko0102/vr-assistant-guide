@@ -1,0 +1,40 @@
+{
+  "session_id": "VR-DEMO-01",
+  "turn_id": "T02",
+  "event_type": "student_answer",
+  "trigger": "student_spoke",
+  "materials": [
+    "這是虛構的VR教學流程，用來測試助教互動，不是完整臨床護理指引。",
+    "課程任務依序為：操作前準備、確認模擬病人身分、詢問與觀察、紀錄、回顧。",
+    "接觸模擬病人前須完成本課程的手部衛生步驟；戴手套不能取代手部衛生。本教材未提供清潔技術細節。",
+    "身分確認：在本模擬課程中，詢問模擬病人的姓名及生日，再與腕帶和任務卡比對；不能只用床號確認。資訊不一致時暫停並向課程教師確認。",
+    "本次觀察任務：詢問模擬病人目前感受，記錄病人原話，以及場景確實提供的觀察資訊。未提供的生命徵象不得猜測，教材不包含診斷、給藥或治療決策。",
+    "紀錄應區分病人陳述與實際觀察；缺少的資訊標示尚未取得。",
+    "只有後端confirmed_actions與目前狀態能證明操作已完成。學生口頭承諾不代表已完成，助教說明也不會自動修改場景。",
+    "課程完成條件：準備完成、身分已確認、詢問與觀察已完成、紀錄已送出且符合課程要求。完成後邀請學生回顧一項學習重點。"
+  ],
+  "vr_state": {
+    "location": "模擬病房A03",
+    "hand_hygiene_completed": false,
+    "identity_verified": false,
+    "observation_completed": false,
+    "record_submitted": false,
+    "record_validated": false,
+    "equipment": [],
+    "patient_statement": null,
+    "observations": [],
+    "vital_signs": null,
+    "idle_seconds": 0,
+    "confirmed_actions": [
+      "進入病房"
+    ],
+    "phase": "操作前準備"
+  },
+  "conversation_history": [
+    {
+      "role": "assistant",
+      "content": "我們先想一想接觸病人前的準備。依照教材，你應該先完成什麼？"
+    }
+  ],
+  "student_message": "我先戴手套，就可以直接接觸病人。"
+}

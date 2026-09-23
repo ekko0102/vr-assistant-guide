@@ -1,0 +1,174 @@
+{
+  "turn_id": "T12",
+  "title": "收到模擬病人陳述，助教引導紀錄",
+  "input_file": "12_input.json",
+  "expected_output_file": "12_expected_output.json",
+  "vr_state_before_backend_update": {
+    "location": "模擬病房A03",
+    "hand_hygiene_completed": true,
+    "identity_verified": true,
+    "observation_completed": false,
+    "record_submitted": false,
+    "record_validated": false,
+    "equipment": [
+      {
+        "id": "sanitizer_01",
+        "name": "乾洗手液",
+        "location": "入口右側的用品架"
+      }
+    ],
+    "patient_statement": null,
+    "observations": [],
+    "vital_signs": null,
+    "idle_seconds": 0,
+    "confirmed_actions": [
+      "進入病房",
+      "完成課程手部衛生步驟",
+      "完成姓名生日與腕帶及任務卡比對"
+    ],
+    "phase": "詢問與觀察",
+    "identity_evidence": {
+      "patient_response": {
+        "姓名": "林怡安",
+        "生日": "1998-04-12",
+        "床號": "A03",
+        "說明": "完全虛構的教學角色"
+      },
+      "wristband": {
+        "姓名": "林怡安",
+        "生日": "1998-04-12",
+        "床號": "A03",
+        "說明": "完全虛構的教學角色"
+      },
+      "task_card": {
+        "姓名": "林怡安",
+        "生日": "1998-04-12",
+        "床號": "A03",
+        "說明": "完全虛構的教學角色"
+      },
+      "match": true
+    }
+  },
+  "backend_delta_before_send": {
+    "observation_completed": true,
+    "patient_statement": "我有點緊張。",
+    "observations": [
+      "病人坐在床邊"
+    ],
+    "vital_signs": null,
+    "phase": "詢問與觀察"
+  },
+  "vr_state_when_sent": {
+    "location": "模擬病房A03",
+    "hand_hygiene_completed": true,
+    "identity_verified": true,
+    "observation_completed": true,
+    "record_submitted": false,
+    "record_validated": false,
+    "equipment": [
+      {
+        "id": "sanitizer_01",
+        "name": "乾洗手液",
+        "location": "入口右側的用品架"
+      }
+    ],
+    "patient_statement": "我有點緊張。",
+    "observations": [
+      "病人坐在床邊"
+    ],
+    "vital_signs": null,
+    "idle_seconds": 0,
+    "confirmed_actions": [
+      "進入病房",
+      "完成課程手部衛生步驟",
+      "完成姓名生日與腕帶及任務卡比對",
+      "完成感受詢問與場景觀察"
+    ],
+    "phase": "詢問與觀察",
+    "identity_evidence": {
+      "patient_response": {
+        "姓名": "林怡安",
+        "生日": "1998-04-12",
+        "床號": "A03",
+        "說明": "完全虛構的教學角色"
+      },
+      "wristband": {
+        "姓名": "林怡安",
+        "生日": "1998-04-12",
+        "床號": "A03",
+        "說明": "完全虛構的教學角色"
+      },
+      "task_card": {
+        "姓名": "林怡安",
+        "生日": "1998-04-12",
+        "床號": "A03",
+        "說明": "完全虛構的教學角色"
+      },
+      "match": true
+    }
+  },
+  "vr_state_after_llm_response": {
+    "location": "模擬病房A03",
+    "hand_hygiene_completed": true,
+    "identity_verified": true,
+    "observation_completed": true,
+    "record_submitted": false,
+    "record_validated": false,
+    "equipment": [
+      {
+        "id": "sanitizer_01",
+        "name": "乾洗手液",
+        "location": "入口右側的用品架"
+      }
+    ],
+    "patient_statement": "我有點緊張。",
+    "observations": [
+      "病人坐在床邊"
+    ],
+    "vital_signs": null,
+    "idle_seconds": 0,
+    "confirmed_actions": [
+      "進入病房",
+      "完成課程手部衛生步驟",
+      "完成姓名生日與腕帶及任務卡比對",
+      "完成感受詢問與場景觀察"
+    ],
+    "phase": "詢問與觀察",
+    "identity_evidence": {
+      "patient_response": {
+        "姓名": "林怡安",
+        "生日": "1998-04-12",
+        "床號": "A03",
+        "說明": "完全虛構的教學角色"
+      },
+      "wristband": {
+        "姓名": "林怡安",
+        "生日": "1998-04-12",
+        "床號": "A03",
+        "說明": "完全虛構的教學角色"
+      },
+      "task_card": {
+        "姓名": "林怡安",
+        "生日": "1998-04-12",
+        "床號": "A03",
+        "說明": "完全虛構的教學角色"
+      },
+      "match": true
+    }
+  },
+  "meaning": "LLM回覆不會自動改變VR狀態；下一回合變更由你扮演後端執行。",
+  "student_role": "本回合學生不發言；由VR事件觸發。",
+  "next_manual_action": "扮演學生，刻意把緊張推論成心跳過快。",
+  "checks": [
+    "只引用提供的原話及姿勢。",
+    "沒有生命徵象，不得補數值。"
+  ],
+  "student_visible_state": "學生已詢問病人感受。模擬病人說「我有點緊張」，場景顯示病人坐在床邊；沒有生命徵象數據。",
+  "backend_trigger_explanation": "收到病人原話與場景觀察",
+  "frontend_presentation": {
+    "subtitle": "病人表示有點緊張，場景也顯示他坐在床邊。你會如何區分病人的陳述與你實際觀察到的資訊？",
+    "tts_text": "病人表示有點緊張，場景也顯示他坐在床邊。你會如何區分病人的陳述與你實際觀察到的資訊？",
+    "after_speech": "台詞播完後，顯示「請回答助教」，等待學生口頭回覆。",
+    "note": "這是前端實作示意，不是LLM輸出欄位；UI樣式由VR開發者決定。"
+  }
+}

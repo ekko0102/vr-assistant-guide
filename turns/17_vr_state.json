@@ -1,0 +1,180 @@
+{
+  "turn_id": "T17",
+  "title": "學生回顧，助教結束互動",
+  "input_file": "17_input.json",
+  "expected_output_file": "17_expected_output.json",
+  "vr_state_before_backend_update": {
+    "location": "模擬病房A03",
+    "hand_hygiene_completed": true,
+    "identity_verified": true,
+    "observation_completed": true,
+    "record_submitted": true,
+    "record_validated": true,
+    "equipment": [
+      {
+        "id": "sanitizer_01",
+        "name": "乾洗手液",
+        "location": "入口右側的用品架"
+      }
+    ],
+    "patient_statement": "我有點緊張。",
+    "observations": [
+      "病人坐在床邊"
+    ],
+    "vital_signs": null,
+    "idle_seconds": 0,
+    "confirmed_actions": [
+      "進入病房",
+      "完成課程手部衛生步驟",
+      "完成姓名生日與腕帶及任務卡比對",
+      "完成感受詢問與場景觀察",
+      "送出課程紀錄",
+      "紀錄通過課程要求"
+    ],
+    "phase": "課程回顧",
+    "identity_evidence": {
+      "patient_response": {
+        "姓名": "林怡安",
+        "生日": "1998-04-12",
+        "床號": "A03",
+        "說明": "完全虛構的教學角色"
+      },
+      "wristband": {
+        "姓名": "林怡安",
+        "生日": "1998-04-12",
+        "床號": "A03",
+        "說明": "完全虛構的教學角色"
+      },
+      "task_card": {
+        "姓名": "林怡安",
+        "生日": "1998-04-12",
+        "床號": "A03",
+        "說明": "完全虛構的教學角色"
+      },
+      "match": true
+    },
+    "submitted_record": "病人表示「我有點緊張」；觀察到病人坐在床邊；生命徵象尚未取得。"
+  },
+  "backend_delta_before_send": {
+    "phase": "課程回顧"
+  },
+  "vr_state_when_sent": {
+    "location": "模擬病房A03",
+    "hand_hygiene_completed": true,
+    "identity_verified": true,
+    "observation_completed": true,
+    "record_submitted": true,
+    "record_validated": true,
+    "equipment": [
+      {
+        "id": "sanitizer_01",
+        "name": "乾洗手液",
+        "location": "入口右側的用品架"
+      }
+    ],
+    "patient_statement": "我有點緊張。",
+    "observations": [
+      "病人坐在床邊"
+    ],
+    "vital_signs": null,
+    "idle_seconds": 0,
+    "confirmed_actions": [
+      "進入病房",
+      "完成課程手部衛生步驟",
+      "完成姓名生日與腕帶及任務卡比對",
+      "完成感受詢問與場景觀察",
+      "送出課程紀錄",
+      "紀錄通過課程要求"
+    ],
+    "phase": "課程回顧",
+    "identity_evidence": {
+      "patient_response": {
+        "姓名": "林怡安",
+        "生日": "1998-04-12",
+        "床號": "A03",
+        "說明": "完全虛構的教學角色"
+      },
+      "wristband": {
+        "姓名": "林怡安",
+        "生日": "1998-04-12",
+        "床號": "A03",
+        "說明": "完全虛構的教學角色"
+      },
+      "task_card": {
+        "姓名": "林怡安",
+        "生日": "1998-04-12",
+        "床號": "A03",
+        "說明": "完全虛構的教學角色"
+      },
+      "match": true
+    },
+    "submitted_record": "病人表示「我有點緊張」；觀察到病人坐在床邊；生命徵象尚未取得。"
+  },
+  "vr_state_after_llm_response": {
+    "location": "模擬病房A03",
+    "hand_hygiene_completed": true,
+    "identity_verified": true,
+    "observation_completed": true,
+    "record_submitted": true,
+    "record_validated": true,
+    "equipment": [
+      {
+        "id": "sanitizer_01",
+        "name": "乾洗手液",
+        "location": "入口右側的用品架"
+      }
+    ],
+    "patient_statement": "我有點緊張。",
+    "observations": [
+      "病人坐在床邊"
+    ],
+    "vital_signs": null,
+    "idle_seconds": 0,
+    "confirmed_actions": [
+      "進入病房",
+      "完成課程手部衛生步驟",
+      "完成姓名生日與腕帶及任務卡比對",
+      "完成感受詢問與場景觀察",
+      "送出課程紀錄",
+      "紀錄通過課程要求"
+    ],
+    "phase": "課程回顧",
+    "identity_evidence": {
+      "patient_response": {
+        "姓名": "林怡安",
+        "生日": "1998-04-12",
+        "床號": "A03",
+        "說明": "完全虛構的教學角色"
+      },
+      "wristband": {
+        "姓名": "林怡安",
+        "生日": "1998-04-12",
+        "床號": "A03",
+        "說明": "完全虛構的教學角色"
+      },
+      "task_card": {
+        "姓名": "林怡安",
+        "生日": "1998-04-12",
+        "床號": "A03",
+        "說明": "完全虛構的教學角色"
+      },
+      "match": true
+    },
+    "submitted_record": "病人表示「我有點緊張」；觀察到病人坐在床邊；生命徵象尚未取得。"
+  },
+  "meaning": "LLM回覆不會自動改變VR狀態；下一回合變更由你扮演後端執行。",
+  "student_role": "我要分清楚病人說的、自己看到的，沒有量到的數據不能猜。",
+  "next_manual_action": "結束此測試；保存實際輸出與評分。",
+  "checks": [
+    "不必為了互動而再提問題。",
+    "正確結束口頭回顧。"
+  ],
+  "student_visible_state": "學生回答回顧問題，說出應區分病人陳述、觀察與推測；本次操作任務已完成。",
+  "backend_trigger_explanation": "學生語音辨識完成：課程回顧",
+  "frontend_presentation": {
+    "subtitle": "正確，你掌握了區分陳述、觀察與推測的重點。本次練習到這裡，之後也請保持以實際資料為依據的習慣。",
+    "tts_text": "正確，你掌握了區分陳述、觀察與推測的重點。本次練習到這裡，之後也請保持以實際資料為依據的習慣。",
+    "after_speech": "台詞播完後，顯示「本次練習完成」。此狀態由後端確認課程完成與回顧結束，不由 false 單獨決定。",
+    "note": "這是前端實作示意，不是LLM輸出欄位；UI樣式由VR開發者決定。"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "turn_id": "T09",
+  "title": "身分確認回答錯誤",
+  "input_file": "09_input.json",
+  "expected_output_file": "09_expected_output.json",
+  "vr_state_before_backend_update": {
+    "location": "模擬病房A03",
+    "hand_hygiene_completed": true,
+    "identity_verified": false,
+    "observation_completed": false,
+    "record_submitted": false,
+    "record_validated": false,
+    "equipment": [
+      {
+        "id": "sanitizer_01",
+        "name": "乾洗手液",
+        "location": "入口右側的用品架"
+      }
+    ],
+    "patient_statement": null,
+    "observations": [],
+    "vital_signs": null,
+    "idle_seconds": 0,
+    "confirmed_actions": [
+      "進入病房",
+      "完成課程手部衛生步驟"
+    ],
+    "phase": "身分確認"
+  },
+  "backend_delta_before_send": {
+    "phase": "身分確認"
+  },
+  "vr_state_when_sent": {
+    "location": "模擬病房A03",
+    "hand_hygiene_completed": true,
+    "identity_verified": false,
+    "observation_completed": false,
+    "record_submitted": false,
+    "record_validated": false,
+    "equipment": [
+      {
+        "id": "sanitizer_01",
+        "name": "乾洗手液",
+        "location": "入口右側的用品架"
+      }
+    ],
+    "patient_statement": null,
+    "observations": [],
+    "vital_signs": null,
+    "idle_seconds": 0,
+    "confirmed_actions": [
+      "進入病房",
+      "完成課程手部衛生步驟"
+    ],
+    "phase": "身分確認"
+  },
+  "vr_state_after_llm_response": {
+    "location": "模擬病房A03",
+    "hand_hygiene_completed": true,
+    "identity_verified": false,
+    "observation_completed": false,
+    "record_submitted": false,
+    "record_validated": false,
+    "equipment": [
+      {
+        "id": "sanitizer_01",
+        "name": "乾洗手液",
+        "location": "入口右側的用品架"
+      }
+    ],
+    "patient_statement": null,
+    "observations": [],
+    "vital_signs": null,
+    "idle_seconds": 0,
+    "confirmed_actions": [
+      "進入病房",
+      "完成課程手部衛生步驟"
+    ],
+    "phase": "身分確認"
+  },
+  "meaning": "LLM回覆不會自動改變VR狀態；下一回合變更由你扮演後端執行。",
+  "student_role": "他住在A03床，確認床號就夠了吧？",
+  "next_manual_action": "扮演學生，修正為姓名及生日。",
+  "checks": [
+    "不把床號當成充分確認。",
+    "不直接跳到觀察任務。"
+  ],
+  "student_visible_state": "學生看見床號A03，口頭認為核對床號就夠了；尚未完成身分比對。",
+  "backend_trigger_explanation": "學生語音辨識完成：回答身分問題",
+  "frontend_presentation": {
+    "subtitle": "床號可以描述位置，但本課程不以床號作為身分確認依據。依照教材，你還需要詢問哪兩項資料？",
+    "tts_text": "床號可以描述位置，但本課程不以床號作為身分確認依據。依照教材，你還需要詢問哪兩項資料？",
+    "after_speech": "台詞播完後，顯示「請回答助教」，等待學生口頭回覆。",
+    "note": "這是前端實作示意，不是LLM輸出欄位；UI樣式由VR開發者決定。"
+  }
+}

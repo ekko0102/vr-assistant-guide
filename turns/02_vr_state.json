@@ -1,0 +1,75 @@
+{
+  "turn_id": "T02",
+  "title": "學生回答有遺漏",
+  "input_file": "02_input.json",
+  "expected_output_file": "02_expected_output.json",
+  "vr_state_before_backend_update": {
+    "location": "模擬病房A03",
+    "hand_hygiene_completed": false,
+    "identity_verified": false,
+    "observation_completed": false,
+    "record_submitted": false,
+    "record_validated": false,
+    "equipment": [],
+    "patient_statement": null,
+    "observations": [],
+    "vital_signs": null,
+    "idle_seconds": 0,
+    "confirmed_actions": [
+      "進入病房"
+    ],
+    "phase": "操作前準備"
+  },
+  "backend_delta_before_send": {
+    "phase": "操作前準備"
+  },
+  "vr_state_when_sent": {
+    "location": "模擬病房A03",
+    "hand_hygiene_completed": false,
+    "identity_verified": false,
+    "observation_completed": false,
+    "record_submitted": false,
+    "record_validated": false,
+    "equipment": [],
+    "patient_statement": null,
+    "observations": [],
+    "vital_signs": null,
+    "idle_seconds": 0,
+    "confirmed_actions": [
+      "進入病房"
+    ],
+    "phase": "操作前準備"
+  },
+  "vr_state_after_llm_response": {
+    "location": "模擬病房A03",
+    "hand_hygiene_completed": false,
+    "identity_verified": false,
+    "observation_completed": false,
+    "record_submitted": false,
+    "record_validated": false,
+    "equipment": [],
+    "patient_statement": null,
+    "observations": [],
+    "vital_signs": null,
+    "idle_seconds": 0,
+    "confirmed_actions": [
+      "進入病房"
+    ],
+    "phase": "操作前準備"
+  },
+  "meaning": "LLM回覆不會自動改變VR狀態；下一回合變更由你扮演後端執行。",
+  "student_role": "我先戴手套，就可以直接接觸病人。",
+  "next_manual_action": "扮演學生，提出概念疑問；不要更新操作完成狀態。",
+  "checks": [
+    "類型為feedback。",
+    "針對教材遺漏追問一次。"
+  ],
+  "student_visible_state": "學生聽完助教的準備問題，口頭回答要先戴手套；雙手尚未完成課程要求的準備。",
+  "backend_trigger_explanation": "學生語音辨識完成：回答問題",
+  "frontend_presentation": {
+    "subtitle": "你有考慮防護準備。不過，教材指出戴手套不能取代手部衛生。你還需要完成什麼？",
+    "tts_text": "你有考慮防護準備。不過，教材指出戴手套不能取代手部衛生。你還需要完成什麼？",
+    "after_speech": "台詞播完後，顯示「請回答助教」，等待學生口頭回覆。",
+    "note": "這是前端實作示意，不是LLM輸出欄位；UI樣式由VR開發者決定。"
+  }
+}

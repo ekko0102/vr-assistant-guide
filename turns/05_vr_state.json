@@ -1,0 +1,76 @@
+{
+  "turn_id": "T05",
+  "title": "設備位置未知，不能猜測",
+  "input_file": "05_input.json",
+  "expected_output_file": "05_expected_output.json",
+  "vr_state_before_backend_update": {
+    "location": "模擬病房A03",
+    "hand_hygiene_completed": false,
+    "identity_verified": false,
+    "observation_completed": false,
+    "record_submitted": false,
+    "record_validated": false,
+    "equipment": [],
+    "patient_statement": null,
+    "observations": [],
+    "vital_signs": null,
+    "idle_seconds": 20,
+    "confirmed_actions": [
+      "進入病房"
+    ],
+    "phase": "操作前準備"
+  },
+  "backend_delta_before_send": {
+    "idle_seconds": 0,
+    "phase": "操作前準備"
+  },
+  "vr_state_when_sent": {
+    "location": "模擬病房A03",
+    "hand_hygiene_completed": false,
+    "identity_verified": false,
+    "observation_completed": false,
+    "record_submitted": false,
+    "record_validated": false,
+    "equipment": [],
+    "patient_statement": null,
+    "observations": [],
+    "vital_signs": null,
+    "idle_seconds": 0,
+    "confirmed_actions": [
+      "進入病房"
+    ],
+    "phase": "操作前準備"
+  },
+  "vr_state_after_llm_response": {
+    "location": "模擬病房A03",
+    "hand_hygiene_completed": false,
+    "identity_verified": false,
+    "observation_completed": false,
+    "record_submitted": false,
+    "record_validated": false,
+    "equipment": [],
+    "patient_statement": null,
+    "observations": [],
+    "vital_signs": null,
+    "idle_seconds": 0,
+    "confirmed_actions": [
+      "進入病房"
+    ],
+    "phase": "操作前準備"
+  },
+  "meaning": "LLM回覆不會自動改變VR狀態；下一回合變更由你扮演後端執行。",
+  "student_role": "乾洗手液在哪裡？",
+  "next_manual_action": "扮演VR後端，在下一回合補入設備位置，而非由LLM猜測。",
+  "checks": [
+    "不得捏造左邊、右邊或床旁位置。",
+    "設備資料仍為空。"
+  ],
+  "student_visible_state": "學生想執行準備動作，卻找不到乾洗手液；目前傳給助教的場景資料也沒有設備位置。",
+  "backend_trigger_explanation": "學生語音辨識完成：詢問位置",
+  "frontend_presentation": {
+    "subtitle": "目前的場景資料沒有提供乾洗手液的位置。你眼前有哪些設備或標示？",
+    "tts_text": "目前的場景資料沒有提供乾洗手液的位置。你眼前有哪些設備或標示？",
+    "after_speech": "台詞播完後，顯示「請回答助教」，等待學生口頭回覆。",
+    "note": "這是前端實作示意，不是LLM輸出欄位；UI樣式由VR開發者決定。"
+  }
+}

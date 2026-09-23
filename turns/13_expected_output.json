@@ -1,0 +1,5 @@
+{
+  "interaction_type": "feedback",
+  "speech": "你注意到病人提到緊張，但目前沒有提供心跳數據，不能直接記錄心跳過快。你會如何改寫成有依據的紀錄？",
+  "await_student_reply": true
+}

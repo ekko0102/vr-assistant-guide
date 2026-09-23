@@ -1,0 +1,5 @@
+{
+  "interaction_type": "proactive",
+  "speech": "我們先停在準備這一步。你目前是不確定要做什麼，還是找不到需要的用品？",
+  "await_student_reply": true
+}

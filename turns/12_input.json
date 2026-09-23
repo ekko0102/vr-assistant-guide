@@ -1,0 +1,136 @@
+{
+  "session_id": "VR-DEMO-01",
+  "turn_id": "T12",
+  "event_type": "scenario_event",
+  "trigger": "patient_statement_received",
+  "materials": [
+    "這是虛構的VR教學流程，用來測試助教互動，不是完整臨床護理指引。",
+    "課程任務依序為：操作前準備、確認模擬病人身分、詢問與觀察、紀錄、回顧。",
+    "接觸模擬病人前須完成本課程的手部衛生步驟；戴手套不能取代手部衛生。本教材未提供清潔技術細節。",
+    "身分確認：在本模擬課程中，詢問模擬病人的姓名及生日，再與腕帶和任務卡比對；不能只用床號確認。資訊不一致時暫停並向課程教師確認。",
+    "本次觀察任務：詢問模擬病人目前感受，記錄病人原話，以及場景確實提供的觀察資訊。未提供的生命徵象不得猜測，教材不包含診斷、給藥或治療決策。",
+    "紀錄應區分病人陳述與實際觀察；缺少的資訊標示尚未取得。",
+    "只有後端confirmed_actions與目前狀態能證明操作已完成。學生口頭承諾不代表已完成，助教說明也不會自動修改場景。",
+    "課程完成條件：準備完成、身分已確認、詢問與觀察已完成、紀錄已送出且符合課程要求。完成後邀請學生回顧一項學習重點。"
+  ],
+  "vr_state": {
+    "location": "模擬病房A03",
+    "hand_hygiene_completed": true,
+    "identity_verified": true,
+    "observation_completed": true,
+    "record_submitted": false,
+    "record_validated": false,
+    "equipment": [
+      {
+        "id": "sanitizer_01",
+        "name": "乾洗手液",
+        "location": "入口右側的用品架"
+      }
+    ],
+    "patient_statement": "我有點緊張。",
+    "observations": [
+      "病人坐在床邊"
+    ],
+    "vital_signs": null,
+    "idle_seconds": 0,
+    "confirmed_actions": [
+      "進入病房",
+      "完成課程手部衛生步驟",
+      "完成姓名生日與腕帶及任務卡比對",
+      "完成感受詢問與場景觀察"
+    ],
+    "phase": "詢問與觀察",
+    "identity_evidence": {
+      "patient_response": {
+        "姓名": "林怡安",
+        "生日": "1998-04-12",
+        "床號": "A03",
+        "說明": "完全虛構的教學角色"
+      },
+      "wristband": {
+        "姓名": "林怡安",
+        "生日": "1998-04-12",
+        "床號": "A03",
+        "說明": "完全虛構的教學角色"
+      },
+      "task_card": {
+        "姓名": "林怡安",
+        "生日": "1998-04-12",
+        "床號": "A03",
+        "說明": "完全虛構的教學角色"
+      },
+      "match": true
+    }
+  },
+  "conversation_history": [
+    {
+      "role": "assistant",
+      "content": "我們先想一想接觸病人前的準備。依照教材，你應該先完成什麼？"
+    },
+    {
+      "role": "student",
+      "content": "我先戴手套，就可以直接接觸病人。"
+    },
+    {
+      "role": "assistant",
+      "content": "你有考慮防護準備。不過，教材指出戴手套不能取代手部衛生。你還需要完成什麼？"
+    },
+    {
+      "role": "student",
+      "content": "所以戴手套，也不能省略手部衛生嗎？"
+    },
+    {
+      "role": "assistant",
+      "content": "是的，依照本課程教材，戴手套不能取代手部衛生。接觸病人前，仍須完成課程要求的手部衛生步驟。"
+    },
+    {
+      "role": "assistant",
+      "content": "我們先停在準備這一步。你目前是不確定要做什麼，還是找不到需要的用品？"
+    },
+    {
+      "role": "student",
+      "content": "乾洗手液在哪裡？"
+    },
+    {
+      "role": "assistant",
+      "content": "目前的場景資料沒有提供乾洗手液的位置。你眼前有哪些設備或標示？"
+    },
+    {
+      "role": "assistant",
+      "content": "乾洗手液位於入口右側的用品架。請依課程步驟完成手部衛生，再繼續操作。"
+    },
+    {
+      "role": "student",
+      "content": "我知道了，我會先完成手部衛生，再接觸病人。"
+    },
+    {
+      "role": "assistant",
+      "content": "正確，你說出了教材要求的順序。現在請在場景中依課程步驟完成手部衛生。"
+    },
+    {
+      "role": "assistant",
+      "content": "你已完成操作前的手部衛生。接下來，要確認病人身分，你會詢問哪兩項資料？"
+    },
+    {
+      "role": "student",
+      "content": "他住在A03床，確認床號就夠了吧？"
+    },
+    {
+      "role": "assistant",
+      "content": "床號可以描述位置，但本課程不以床號作為身分確認依據。依照教材，你還需要詢問哪兩項資料？"
+    },
+    {
+      "role": "student",
+      "content": "我要詢問姓名和生日，再與腕帶及任務卡比對。"
+    },
+    {
+      "role": "assistant",
+      "content": "正確，這符合本課程的身分確認方式。請實際詢問並完成比對，再繼續下一步。"
+    },
+    {
+      "role": "assistant",
+      "content": "身分資料已比對一致。接下來，請詢問病人目前的感受，並留意場景提供的觀察資訊。"
+    }
+  ],
+  "student_message": ""
+}

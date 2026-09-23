@@ -1,0 +1,75 @@
+{
+  "turn_id": "T03",
+  "title": "學生主動釐清概念",
+  "input_file": "03_input.json",
+  "expected_output_file": "03_expected_output.json",
+  "vr_state_before_backend_update": {
+    "location": "模擬病房A03",
+    "hand_hygiene_completed": false,
+    "identity_verified": false,
+    "observation_completed": false,
+    "record_submitted": false,
+    "record_validated": false,
+    "equipment": [],
+    "patient_statement": null,
+    "observations": [],
+    "vital_signs": null,
+    "idle_seconds": 0,
+    "confirmed_actions": [
+      "進入病房"
+    ],
+    "phase": "操作前準備"
+  },
+  "backend_delta_before_send": {
+    "phase": "操作前準備"
+  },
+  "vr_state_when_sent": {
+    "location": "模擬病房A03",
+    "hand_hygiene_completed": false,
+    "identity_verified": false,
+    "observation_completed": false,
+    "record_submitted": false,
+    "record_validated": false,
+    "equipment": [],
+    "patient_statement": null,
+    "observations": [],
+    "vital_signs": null,
+    "idle_seconds": 0,
+    "confirmed_actions": [
+      "進入病房"
+    ],
+    "phase": "操作前準備"
+  },
+  "vr_state_after_llm_response": {
+    "location": "模擬病房A03",
+    "hand_hygiene_completed": false,
+    "identity_verified": false,
+    "observation_completed": false,
+    "record_submitted": false,
+    "record_validated": false,
+    "equipment": [],
+    "patient_statement": null,
+    "observations": [],
+    "vital_signs": null,
+    "idle_seconds": 0,
+    "confirmed_actions": [
+      "進入病房"
+    ],
+    "phase": "操作前準備"
+  },
+  "meaning": "LLM回覆不會自動改變VR狀態；下一回合變更由你扮演後端執行。",
+  "student_role": "所以戴手套，也不能省略手部衛生嗎？",
+  "next_manual_action": "扮演VR後端，模擬學生停留20秒；尚未操作。",
+  "checks": [
+    "直接回答問題。",
+    "沒有必要時不強迫追問。"
+  ],
+  "student_visible_state": "學生仍站在原處，對手套與手部衛生的關係不確定，因此主動發問。",
+  "backend_trigger_explanation": "學生語音辨識完成：主動提問",
+  "frontend_presentation": {
+    "subtitle": "是的，依照本課程教材，戴手套不能取代手部衛生。接觸病人前，仍須完成課程要求的手部衛生步驟。",
+    "tts_text": "是的，依照本課程教材，戴手套不能取代手部衛生。接觸病人前，仍須完成課程要求的手部衛生步驟。",
+    "after_speech": "台詞播完後，不要求學生一定回答；保留操作介面，依課程狀態等待操作、事件或學生主動提問。",
+    "note": "這是前端實作示意，不是LLM輸出欄位；UI樣式由VR開發者決定。"
+  }
+}

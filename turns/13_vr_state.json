@@ -1,0 +1,171 @@
+{
+  "turn_id": "T13",
+  "title": "學生過度推論，回到證據",
+  "input_file": "13_input.json",
+  "expected_output_file": "13_expected_output.json",
+  "vr_state_before_backend_update": {
+    "location": "模擬病房A03",
+    "hand_hygiene_completed": true,
+    "identity_verified": true,
+    "observation_completed": true,
+    "record_submitted": false,
+    "record_validated": false,
+    "equipment": [
+      {
+        "id": "sanitizer_01",
+        "name": "乾洗手液",
+        "location": "入口右側的用品架"
+      }
+    ],
+    "patient_statement": "我有點緊張。",
+    "observations": [
+      "病人坐在床邊"
+    ],
+    "vital_signs": null,
+    "idle_seconds": 0,
+    "confirmed_actions": [
+      "進入病房",
+      "完成課程手部衛生步驟",
+      "完成姓名生日與腕帶及任務卡比對",
+      "完成感受詢問與場景觀察"
+    ],
+    "phase": "詢問與觀察",
+    "identity_evidence": {
+      "patient_response": {
+        "姓名": "林怡安",
+        "生日": "1998-04-12",
+        "床號": "A03",
+        "說明": "完全虛構的教學角色"
+      },
+      "wristband": {
+        "姓名": "林怡安",
+        "生日": "1998-04-12",
+        "床號": "A03",
+        "說明": "完全虛構的教學角色"
+      },
+      "task_card": {
+        "姓名": "林怡安",
+        "生日": "1998-04-12",
+        "床號": "A03",
+        "說明": "完全虛構的教學角色"
+      },
+      "match": true
+    }
+  },
+  "backend_delta_before_send": {
+    "phase": "詢問與觀察"
+  },
+  "vr_state_when_sent": {
+    "location": "模擬病房A03",
+    "hand_hygiene_completed": true,
+    "identity_verified": true,
+    "observation_completed": true,
+    "record_submitted": false,
+    "record_validated": false,
+    "equipment": [
+      {
+        "id": "sanitizer_01",
+        "name": "乾洗手液",
+        "location": "入口右側的用品架"
+      }
+    ],
+    "patient_statement": "我有點緊張。",
+    "observations": [
+      "病人坐在床邊"
+    ],
+    "vital_signs": null,
+    "idle_seconds": 0,
+    "confirmed_actions": [
+      "進入病房",
+      "完成課程手部衛生步驟",
+      "完成姓名生日與腕帶及任務卡比對",
+      "完成感受詢問與場景觀察"
+    ],
+    "phase": "詢問與觀察",
+    "identity_evidence": {
+      "patient_response": {
+        "姓名": "林怡安",
+        "生日": "1998-04-12",
+        "床號": "A03",
+        "說明": "完全虛構的教學角色"
+      },
+      "wristband": {
+        "姓名": "林怡安",
+        "生日": "1998-04-12",
+        "床號": "A03",
+        "說明": "完全虛構的教學角色"
+      },
+      "task_card": {
+        "姓名": "林怡安",
+        "生日": "1998-04-12",
+        "床號": "A03",
+        "說明": "完全虛構的教學角色"
+      },
+      "match": true
+    }
+  },
+  "vr_state_after_llm_response": {
+    "location": "模擬病房A03",
+    "hand_hygiene_completed": true,
+    "identity_verified": true,
+    "observation_completed": true,
+    "record_submitted": false,
+    "record_validated": false,
+    "equipment": [
+      {
+        "id": "sanitizer_01",
+        "name": "乾洗手液",
+        "location": "入口右側的用品架"
+      }
+    ],
+    "patient_statement": "我有點緊張。",
+    "observations": [
+      "病人坐在床邊"
+    ],
+    "vital_signs": null,
+    "idle_seconds": 0,
+    "confirmed_actions": [
+      "進入病房",
+      "完成課程手部衛生步驟",
+      "完成姓名生日與腕帶及任務卡比對",
+      "完成感受詢問與場景觀察"
+    ],
+    "phase": "詢問與觀察",
+    "identity_evidence": {
+      "patient_response": {
+        "姓名": "林怡安",
+        "生日": "1998-04-12",
+        "床號": "A03",
+        "說明": "完全虛構的教學角色"
+      },
+      "wristband": {
+        "姓名": "林怡安",
+        "生日": "1998-04-12",
+        "床號": "A03",
+        "說明": "完全虛構的教學角色"
+      },
+      "task_card": {
+        "姓名": "林怡安",
+        "生日": "1998-04-12",
+        "床號": "A03",
+        "說明": "完全虛構的教學角色"
+      },
+      "match": true
+    }
+  },
+  "meaning": "LLM回覆不會自動改變VR狀態；下一回合變更由你扮演後端執行。",
+  "student_role": "他說緊張，所以心跳一定很快，我會記錄心跳過快。",
+  "next_manual_action": "扮演學生，先詢問應怎麼寫，而不是立刻提交紀錄。",
+  "checks": [
+    "指出缺少數據，不跟著猜測。",
+    "不新增診斷或處置。"
+  ],
+  "student_visible_state": "學生把病人的緊張陳述推論成心跳過快，正在口頭描述打算寫入的內容，尚未提交。",
+  "backend_trigger_explanation": "學生語音辨識完成：描述紀錄",
+  "frontend_presentation": {
+    "subtitle": "你注意到病人提到緊張，但目前沒有提供心跳數據，不能直接記錄心跳過快。你會如何改寫成有依據的紀錄？",
+    "tts_text": "你注意到病人提到緊張，但目前沒有提供心跳數據，不能直接記錄心跳過快。你會如何改寫成有依據的紀錄？",
+    "after_speech": "台詞播完後，顯示「請回答助教」，等待學生口頭回覆。",
+    "note": "這是前端實作示意，不是LLM輸出欄位；UI樣式由VR開發者決定。"
+  }
+}

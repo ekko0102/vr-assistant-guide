@@ -1,0 +1,5 @@
+{
+  "interaction_type": "proactive",
+  "speech": "你已完成操作前的手部衛生。接下來，要確認病人身分，你會詢問哪兩項資料？",
+  "await_student_reply": true
+}

@@ -1,0 +1,94 @@
+{
+  "turn_id": "T06",
+  "title": "後端補充設備位置",
+  "input_file": "06_input.json",
+  "expected_output_file": "06_expected_output.json",
+  "vr_state_before_backend_update": {
+    "location": "模擬病房A03",
+    "hand_hygiene_completed": false,
+    "identity_verified": false,
+    "observation_completed": false,
+    "record_submitted": false,
+    "record_validated": false,
+    "equipment": [],
+    "patient_statement": null,
+    "observations": [],
+    "vital_signs": null,
+    "idle_seconds": 0,
+    "confirmed_actions": [
+      "進入病房"
+    ],
+    "phase": "操作前準備"
+  },
+  "backend_delta_before_send": {
+    "equipment": [
+      {
+        "id": "sanitizer_01",
+        "name": "乾洗手液",
+        "location": "入口右側的用品架"
+      }
+    ],
+    "phase": "操作前準備"
+  },
+  "vr_state_when_sent": {
+    "location": "模擬病房A03",
+    "hand_hygiene_completed": false,
+    "identity_verified": false,
+    "observation_completed": false,
+    "record_submitted": false,
+    "record_validated": false,
+    "equipment": [
+      {
+        "id": "sanitizer_01",
+        "name": "乾洗手液",
+        "location": "入口右側的用品架"
+      }
+    ],
+    "patient_statement": null,
+    "observations": [],
+    "vital_signs": null,
+    "idle_seconds": 0,
+    "confirmed_actions": [
+      "進入病房"
+    ],
+    "phase": "操作前準備"
+  },
+  "vr_state_after_llm_response": {
+    "location": "模擬病房A03",
+    "hand_hygiene_completed": false,
+    "identity_verified": false,
+    "observation_completed": false,
+    "record_submitted": false,
+    "record_validated": false,
+    "equipment": [
+      {
+        "id": "sanitizer_01",
+        "name": "乾洗手液",
+        "location": "入口右側的用品架"
+      }
+    ],
+    "patient_statement": null,
+    "observations": [],
+    "vital_signs": null,
+    "idle_seconds": 0,
+    "confirmed_actions": [
+      "進入病房"
+    ],
+    "phase": "操作前準備"
+  },
+  "meaning": "LLM回覆不會自動改變VR狀態；下一回合變更由你扮演後端執行。",
+  "student_role": "本回合學生不發言；由VR事件觸發。",
+  "next_manual_action": "扮演學生說出正確順序，但仍不標記操作完成。",
+  "checks": [
+    "位置來自新提供的equipment。",
+    "只指示操作，await_student_reply為false。"
+  ],
+  "student_visible_state": "學生仍在找用品。後端這時補入入口右側用品架的設備位置，主動觸發助教提示；學生沒有再說話。",
+  "backend_trigger_explanation": "設備資料補入完成",
+  "frontend_presentation": {
+    "subtitle": "乾洗手液位於入口右側的用品架。請依課程步驟完成手部衛生，再繼續操作。",
+    "tts_text": "乾洗手液位於入口右側的用品架。請依課程步驟完成手部衛生，再繼續操作。",
+    "after_speech": "台詞播完後，不要求學生一定回答；保留操作介面，依課程狀態等待操作、事件或學生主動提問。",
+    "note": "這是前端實作示意，不是LLM輸出欄位；UI樣式由VR開發者決定。"
+  }
+}

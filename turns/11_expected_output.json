@@ -1,0 +1,5 @@
+{
+  "interaction_type": "proactive",
+  "speech": "身分資料已比對一致。接下來，請詢問病人目前的感受，並留意場景提供的觀察資訊。",
+  "await_student_reply": false
+}

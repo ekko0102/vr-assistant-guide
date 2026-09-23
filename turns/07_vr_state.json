@@ -1,0 +1,93 @@
+{
+  "turn_id": "T07",
+  "title": "口頭答對，不等於做完",
+  "input_file": "07_input.json",
+  "expected_output_file": "07_expected_output.json",
+  "vr_state_before_backend_update": {
+    "location": "模擬病房A03",
+    "hand_hygiene_completed": false,
+    "identity_verified": false,
+    "observation_completed": false,
+    "record_submitted": false,
+    "record_validated": false,
+    "equipment": [
+      {
+        "id": "sanitizer_01",
+        "name": "乾洗手液",
+        "location": "入口右側的用品架"
+      }
+    ],
+    "patient_statement": null,
+    "observations": [],
+    "vital_signs": null,
+    "idle_seconds": 0,
+    "confirmed_actions": [
+      "進入病房"
+    ],
+    "phase": "操作前準備"
+  },
+  "backend_delta_before_send": {
+    "phase": "操作前準備"
+  },
+  "vr_state_when_sent": {
+    "location": "模擬病房A03",
+    "hand_hygiene_completed": false,
+    "identity_verified": false,
+    "observation_completed": false,
+    "record_submitted": false,
+    "record_validated": false,
+    "equipment": [
+      {
+        "id": "sanitizer_01",
+        "name": "乾洗手液",
+        "location": "入口右側的用品架"
+      }
+    ],
+    "patient_statement": null,
+    "observations": [],
+    "vital_signs": null,
+    "idle_seconds": 0,
+    "confirmed_actions": [
+      "進入病房"
+    ],
+    "phase": "操作前準備"
+  },
+  "vr_state_after_llm_response": {
+    "location": "模擬病房A03",
+    "hand_hygiene_completed": false,
+    "identity_verified": false,
+    "observation_completed": false,
+    "record_submitted": false,
+    "record_validated": false,
+    "equipment": [
+      {
+        "id": "sanitizer_01",
+        "name": "乾洗手液",
+        "location": "入口右側的用品架"
+      }
+    ],
+    "patient_statement": null,
+    "observations": [],
+    "vital_signs": null,
+    "idle_seconds": 0,
+    "confirmed_actions": [
+      "進入病房"
+    ],
+    "phase": "操作前準備"
+  },
+  "meaning": "LLM回覆不會自動改變VR狀態；下一回合變更由你扮演後端執行。",
+  "student_role": "我知道了，我會先完成手部衛生，再接觸病人。",
+  "next_manual_action": "扮演VR後端，模擬完成課程指定操作，再新增confirmed_actions紀錄。",
+  "checks": [
+    "不說「你已完成手部衛生」。",
+    "phase仍為操作前準備。"
+  ],
+  "student_visible_state": "學生已知道位置與順序，口頭承諾先做手部衛生，但還沒有真正完成VR操作。",
+  "backend_trigger_explanation": "學生語音辨識完成：口頭說明順序",
+  "frontend_presentation": {
+    "subtitle": "正確，你說出了教材要求的順序。現在請在場景中依課程步驟完成手部衛生。",
+    "tts_text": "正確，你說出了教材要求的順序。現在請在場景中依課程步驟完成手部衛生。",
+    "after_speech": "台詞播完後，不要求學生一定回答；保留操作介面，依課程狀態等待操作、事件或學生主動提問。",
+    "note": "這是前端實作示意，不是LLM輸出欄位；UI樣式由VR開發者決定。"
+  }
+}

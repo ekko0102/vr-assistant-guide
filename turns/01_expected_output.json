@@ -1,0 +1,5 @@
+{
+  "interaction_type": "proactive",
+  "speech": "我們先想一想接觸病人前的準備。依照教材，你應該先完成什麼？",
+  "await_student_reply": true
+}

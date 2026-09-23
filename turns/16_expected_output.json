@@ -1,0 +1,5 @@
+{
+  "interaction_type": "proactive",
+  "speech": "你已完成本次操作與紀錄任務。回顧剛才的練習，你會如何避免把推測寫成已確認的事實？",
+  "await_student_reply": true
+}
